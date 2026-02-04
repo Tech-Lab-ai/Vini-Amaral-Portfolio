@@ -112,7 +112,7 @@ export function Navbar() {
                     <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Facebook className="w-7 h-7" />
                     </Link>
-                    <Link href="mailto:contact@viniamaral.com" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
+                    <Link href="mailto:viniamaral2026@gmail.com" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Mail className="w-7 h-7" />
                     </Link>
                   </div>

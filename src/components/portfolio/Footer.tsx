@@ -29,7 +29,7 @@ export function Footer() {
             <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="hover:text-foreground transition-colors">GitHub</Link>
             <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="hover:text-foreground transition-colors">LinkedIn</Link>
             <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="hover:text-foreground transition-colors">Facebook</Link>
-            <Link href="mailto:contact@viniamaral.com" className="hover:text-foreground transition-colors">Email</Link>
+            <Link href="mailto:viniamaral2026@gmail.com" className="hover:text-foreground transition-colors">Email</Link>
           </div>
         </div>
       </div>

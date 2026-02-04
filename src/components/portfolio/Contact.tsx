@@ -12,8 +12,8 @@ const contacts = [
   },
   {
     name: "Email",
-    value: "contact@viniamaral.com",
-    href: "mailto:contact@viniamaral.com",
+    value: "viniamaral2026@gmail.com",
+    href: "mailto:viniamaral2026@gmail.com",
     icon: Mail,
   },
   {
@@ -82,7 +82,7 @@ export function Contact() {
                   software pronto para produção.
                 </p>
                 <Button size="lg" className="w-full rounded-full py-8 text-lg" asChild>
-                  <Link href="mailto:contact@viniamaral.com">
+                  <Link href="mailto:viniamaral2026@gmail.com">
                     Iniciar uma Conversa
                   </Link>
                 </Button>
