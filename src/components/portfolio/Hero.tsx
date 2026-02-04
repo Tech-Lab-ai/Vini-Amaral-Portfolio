@@ -1,7 +1,7 @@
 
 import Image from "next/image";
 import Link from "next/link";
-import { Github, Linkedin, ArrowRight, Terminal, Sparkles, Facebook } from "lucide-react";
+import { Github, Linkedin, ArrowRight, Terminal, Sparkles, Facebook, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 
@@ -45,6 +45,9 @@ export function Hero() {
             </div>
 
             <div className="flex items-center justify-center lg:justify-start gap-6 pt-4 text-muted-foreground">
+              <Link href="https://wa.me/5551981446019" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 text-sm">
+                <MessageCircle className="w-5 h-5" /> <span className="hidden sm:inline">WhatsApp</span>
+              </Link>
               <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 text-sm">
                 <Github className="w-5 h-5" /> <span className="hidden sm:inline">GitHub</span>
               </Link>

@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Mail, Menu, Command, Facebook } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, Command, Facebook, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
@@ -53,6 +53,11 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <Button variant="ghost" size="icon" asChild className="rounded-full text-muted-foreground hover:text-primary">
+              <Link href="https://wa.me/5551981446019" target="_blank">
+                <MessageCircle className="w-5 h-5" />
+              </Link>
+            </Button>
+            <Button variant="ghost" size="icon" asChild className="rounded-full text-muted-foreground hover:text-primary">
               <Link href="https://github.com/Tech-Lab-ai" target="_blank">
                 <Github className="w-5 h-5" />
               </Link>
@@ -95,6 +100,9 @@ export function Navbar() {
                 <div className="pt-10 border-t border-border space-y-6">
                   <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Social Intelligence</p>
                   <div className="flex items-center gap-4 flex-wrap">
+                    <Link href="https://wa.me/5551981446019" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
+                      <MessageCircle className="w-7 h-7" />
+                    </Link>
                     <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Github className="w-7 h-7" />
                     </Link>

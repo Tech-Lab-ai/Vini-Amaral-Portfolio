@@ -25,6 +25,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
+            <Link href="https://wa.me/5551981446019" target="_blank" className="hover:text-foreground transition-colors">WhatsApp</Link>
             <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="hover:text-foreground transition-colors">GitHub</Link>
             <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="hover:text-foreground transition-colors">LinkedIn</Link>
             <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="hover:text-foreground transition-colors">Facebook</Link>

@@ -1,9 +1,15 @@
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, ArrowUpRight, Facebook } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, Facebook, MessageCircle } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contacts = [
+  {
+    name: "WhatsApp",
+    value: "(51) 98144-6019",
+    href: "https://wa.me/5551981446019",
+    icon: MessageCircle,
+  },
   {
     name: "Email",
     value: "contact@viniamaral.com",
