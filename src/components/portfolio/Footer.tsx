@@ -16,7 +16,7 @@ export function Footer() {
                 alt="Vini Amaral" 
                 width={180} 
                 height={45} 
-                className="h-9 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+                className="h-9 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity dark:invert-0 invert"
               />
             </Link>
             <p className="text-sm text-muted-foreground">
@@ -25,8 +25,9 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <Link href="https://github.com/Tech-Lab-ai" className="hover:text-foreground transition-colors">GitHub</Link>
-            <Link href="https://linkedin.com/in/viniamaral" className="hover:text-foreground transition-colors">LinkedIn</Link>
+            <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="hover:text-foreground transition-colors">GitHub</Link>
+            <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="hover:text-foreground transition-colors">LinkedIn</Link>
+            <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="hover:text-foreground transition-colors">Facebook</Link>
             <Link href="mailto:contact@viniamaral.com" className="hover:text-foreground transition-colors">Email</Link>
           </div>
         </div>

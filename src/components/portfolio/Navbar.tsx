@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Mail, Menu, Command } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, Command, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
@@ -94,12 +94,15 @@ export function Navbar() {
                 ))}
                 <div className="pt-10 border-t border-border space-y-6">
                   <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Social Intelligence</p>
-                  <div className="flex items-center gap-6">
+                  <div className="flex items-center gap-4 flex-wrap">
                     <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Github className="w-7 h-7" />
                     </Link>
                     <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Linkedin className="w-7 h-7" />
+                    </Link>
+                    <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
+                      <Facebook className="w-7 h-7" />
                     </Link>
                     <Link href="mailto:contact@viniamaral.com" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Mail className="w-7 h-7" />

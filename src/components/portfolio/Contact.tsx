@@ -1,6 +1,6 @@
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, ArrowUpRight } from "lucide-react";
+import { Github, Linkedin, Mail, ArrowUpRight, Facebook } from "lucide-react";
 import { Button } from "@/components/ui/button";
 
 const contacts = [
@@ -21,6 +21,12 @@ const contacts = [
     value: "github.com/Tech-Lab-ai",
     href: "https://github.com/Tech-Lab-ai",
     icon: Github,
+  },
+  {
+    name: "Facebook",
+    value: "facebook.com/Vini.Amaral.Oficial",
+    href: "https://www.facebook.com/Vini.Amaral.Oficial",
+    icon: Facebook,
   },
 ];
 
@@ -44,6 +50,7 @@ export function Contact() {
                   <Link
                     key={contact.name}
                     href={contact.href}
+                    target="_blank"
                     className="flex items-center gap-4 p-6 rounded-2xl bg-card border border-border transition-all hover:bg-primary/5 hover:border-primary/50 group"
                   >
                     <div className="w-12 h-12 rounded-xl bg-secondary flex items-center justify-center text-primary group-hover:bg-primary group-hover:text-white transition-colors">
