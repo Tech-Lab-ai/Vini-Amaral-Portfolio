@@ -59,27 +59,26 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative group w-full max-w-[500px] lg:flex-1">
+          <div className="relative group w-full max-w-[600px] lg:flex-1">
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/30 to-accent/30 rounded-3xl blur-3xl opacity-20 group-hover:opacity-40 transition-opacity duration-500" />
-            <div className="relative aspect-[4/3] w-full rounded-3xl overflow-hidden border border-white/10 p-8 bg-card/30 backdrop-blur-xl shadow-2xl flex items-center justify-center">
-              <div className="relative w-full h-full flex items-center justify-center group-hover:scale-105 transition-transform duration-700">
+            <div className="relative aspect-square w-full rounded-3xl overflow-hidden border border-white/10 p-4 bg-card/30 backdrop-blur-xl shadow-2xl flex items-center justify-center">
+              <div className="relative w-full h-full flex items-center justify-center group-hover:scale-[1.02] transition-transform duration-700">
                 <Image
-                  src="/logo_vini.png"
-                  alt="Vini Amaral Logo"
-                  width={400}
-                  height={150}
-                  className="object-contain dark:invert-0 invert-0 brightness-110"
+                  src="/Marketing material i.png"
+                  alt="Vini Amaral - Material de Marketing"
+                  fill
+                  className="object-cover rounded-2xl brightness-110"
                   priority
                 />
               </div>
               
               {/* Decorative Elements */}
-              <div className="absolute -top-4 -right-4 p-4 glass rounded-2xl border shadow-xl animate-bounce duration-[4000ms]">
+              <div className="absolute -top-4 -right-4 p-4 glass rounded-2xl border shadow-xl animate-bounce duration-[4000ms] z-20">
                 <div className="w-6 h-6 text-primary">
                   <svg viewBox="0 0 24 24" fill="currentColor"><path d="M20 2H4c-1.1 0-2 .9-2 2v16c0 1.1.9 2 2 2h16c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2zM8 19H5v-9h3v9zm0-11H5V5h3v3zm5 11h-3v-9h3v9zm0-11h-3V5h3v3zm5 11h-3v-9h3v9zm0-11h-3V5h3v3z"/></svg>
                 </div>
               </div>
-              <div className="absolute -bottom-6 -left-6 p-4 glass rounded-2xl border shadow-xl animate-pulse">
+              <div className="absolute -bottom-6 -left-6 p-4 glass rounded-2xl border shadow-xl animate-pulse z-20">
                 <div className="flex items-center gap-2 text-[10px] font-bold text-accent uppercase tracking-tighter">
                   <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
                   Sistema Ativo
