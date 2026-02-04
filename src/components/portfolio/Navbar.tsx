@@ -16,14 +16,14 @@ const navLinks = [
 export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b">
-      <div className="container mx-auto px-4 h-16 flex items-center justify-between">
+      <div className="container mx-auto px-4 h-20 flex items-center justify-between">
         <Link href="/" className="flex items-center">
           <Image 
             src="/logo_vini.png" 
             alt="Vini Amaral" 
-            width={160} 
-            height={40} 
-            className="h-8 w-auto object-contain"
+            width={240} 
+            height={60} 
+            className="h-12 w-auto object-contain"
             priority
           />
         </Link>
