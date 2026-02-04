@@ -18,8 +18,8 @@ const contacts = [
   },
   {
     name: "LinkedIn",
-    value: "linkedin.com/in/viniamaral",
-    href: "https://linkedin.com/in/viniamaral",
+    value: "linkedin.com/in/dev-vini-amaral",
+    href: "https://www.linkedin.com/in/dev-vini-amaral/",
     icon: Linkedin,
   },
   {

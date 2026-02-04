@@ -63,7 +63,7 @@ export function Navbar() {
               </Link>
             </Button>
             <Button variant="ghost" size="icon" asChild className="rounded-full text-muted-foreground hover:text-primary">
-              <Link href="https://linkedin.com/in/viniamaral" target="_blank">
+              <Link href="https://www.linkedin.com/in/dev-vini-amaral/" target="_blank">
                 <Linkedin className="w-5 h-5" />
               </Link>
             </Button>
@@ -106,7 +106,7 @@ export function Navbar() {
                     <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Github className="w-7 h-7" />
                     </Link>
-                    <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
+                    <Link href="https://www.linkedin.com/in/dev-vini-amaral/" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Linkedin className="w-7 h-7" />
                     </Link>
                     <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">

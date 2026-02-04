@@ -51,7 +51,7 @@ export function Hero() {
               <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 text-sm">
                 <Github className="w-5 h-5" /> <span className="hidden sm:inline">GitHub</span>
               </Link>
-              <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 text-sm">
+              <Link href="https://www.linkedin.com/in/dev-vini-amaral/" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 text-sm">
                 <Linkedin className="w-5 h-5" /> <span className="hidden sm:inline">LinkedIn</span>
               </Link>
               <Link href="https://www.facebook.com/Vini.Amaral.Oficial" target="_blank" className="hover:text-primary transition-colors flex items-center gap-2 text-sm">
