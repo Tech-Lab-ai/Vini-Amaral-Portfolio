@@ -1,9 +1,8 @@
-
 "use client";
 
 import Link from "next/link";
-import { Github, Linkedin, Mail, Menu, X } from "lucide-react";
-import { useState } from "react";
+import Image from "next/image";
+import { Github, Linkedin, Mail, Menu } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 
@@ -18,8 +17,15 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 glass border-b">
       <div className="container mx-auto px-4 h-16 flex items-center justify-between">
-        <Link href="/" className="font-headline font-bold text-xl tracking-tighter">
-          VINI<span className="text-primary">AMARAL</span>
+        <Link href="/" className="flex items-center">
+          <Image 
+            src="/logo_vini.png" 
+            alt="Vini Amaral" 
+            width={160} 
+            height={40} 
+            className="h-8 w-auto object-contain"
+            priority
+          />
         </Link>
 
         {/* Desktop Nav */}
@@ -51,7 +57,7 @@ export function Navbar() {
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-l w-[80%] max-w-sm">
+            <SheetContent side="right" className="bg-background border-l w-[80%] max-sm:w-full">
               <div className="flex flex-col gap-8 mt-12">
                 {navLinks.map((link) => (
                   <Link

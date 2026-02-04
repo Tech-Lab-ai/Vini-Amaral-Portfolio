@@ -1,5 +1,5 @@
-
 import Link from "next/link";
+import Image from "next/image";
 
 export function Footer() {
   const currentYear = new Date().getFullYear();
@@ -9,8 +9,14 @@ export function Footer() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-center gap-8">
           <div className="flex flex-col items-center md:items-start gap-2">
-            <Link href="/" className="font-headline font-bold text-lg tracking-tighter">
-              VINI<span className="text-primary">AMARAL</span>
+            <Link href="/" className="block">
+              <Image 
+                src="/logo_vini.png" 
+                alt="Vini Amaral" 
+                width={140} 
+                height={35} 
+                className="h-7 w-auto object-contain opacity-80 hover:opacity-100 transition-opacity"
+              />
             </Link>
             <p className="text-sm text-muted-foreground">
               © {currentYear} Vini Amaral. Built with Next.js & AI.
