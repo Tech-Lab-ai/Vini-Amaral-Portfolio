@@ -14,8 +14,7 @@ export function GithubFeed() {
   useEffect(() => {
     async function fetchActivity() {
       try {
-        // Using a hardcoded example username or ideally Vini's actual username
-        const result = await classifyGithubActivity({ username: "viniamaral" });
+        const result = await classifyGithubActivity({ username: "Tech-Lab-ai" });
         setActivities(result);
       } catch (error) {
         console.error("Failed to fetch activity", error);
@@ -62,7 +61,7 @@ export function GithubFeed() {
                       key={idx} 
                       className="p-4 rounded-xl border border-border/50 bg-background/50 flex items-start gap-4 transition-colors hover:border-primary/30"
                     >
-                      <div className="mt-1.5 w-2 h-2 rounded-full bg-primary shrink-0" />
+                      <div className="mt-1.5 v-2 h-2 rounded-full bg-primary shrink-0" />
                       <p className="text-sm md:text-base leading-relaxed">{activity}</p>
                     </li>
                   ))}

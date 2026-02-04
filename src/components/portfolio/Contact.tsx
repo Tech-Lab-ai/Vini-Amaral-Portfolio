@@ -18,8 +18,8 @@ const contacts = [
   },
   {
     name: "GitHub",
-    value: "github.com/viniamaral",
-    href: "https://github.com/viniamaral",
+    value: "github.com/Tech-Lab-ai",
+    href: "https://github.com/Tech-Lab-ai",
     icon: Github,
   },
 ];

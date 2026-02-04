@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Github, Layers, Zap, Bot } from "lucide-react";
@@ -12,7 +13,7 @@ const projects = [
     description: "Enterprise-grade RAG pipeline using Google Vertex AI and Vector Search for real-time document intelligence.",
     tags: ["Genkit", "Vertex AI", "Next.js", "Firebase"],
     icon: Bot,
-    github: "#",
+    github: "https://github.com/Tech-Lab-ai",
     demo: "#",
   },
   {
@@ -21,7 +22,7 @@ const projects = [
     description: "A specialized Go-based CLI tool for automated cloud resource provisioning and environment synchronization.",
     tags: ["Golang", "Cloud SDK", "gRPC", "Docker"],
     icon: Zap,
-    github: "#",
+    github: "https://github.com/Tech-Lab-ai",
     demo: "#",
   },
   {
@@ -30,7 +31,7 @@ const projects = [
     description: "High-throughput event processing engine capable of handling 50k+ events/sec with minimal cold start latency.",
     tags: ["Node.js", "PubSub", "Redis", "Cloud Run"],
     icon: Layers,
-    github: "#",
+    github: "https://github.com/Tech-Lab-ai",
     demo: "#",
   }
 ];
@@ -51,7 +52,7 @@ export function Projects() {
             </p>
           </div>
           <Link 
-            href="https://github.com/viniamaral" 
+            href="https://github.com/Tech-Lab-ai" 
             target="_blank" 
             className="group flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition-all"
           >

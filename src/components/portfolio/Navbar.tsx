@@ -53,7 +53,7 @@ export function Navbar() {
           <div className="flex items-center gap-4">
             <ThemeToggle />
             <Button variant="ghost" size="icon" asChild className="rounded-full text-muted-foreground hover:text-primary">
-              <Link href="https://github.com/viniamaral" target="_blank">
+              <Link href="https://github.com/Tech-Lab-ai" target="_blank">
                 <Github className="w-5 h-5" />
               </Link>
             </Button>
@@ -95,7 +95,7 @@ export function Navbar() {
                 <div className="pt-10 border-t border-border space-y-6">
                   <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Social Intelligence</p>
                   <div className="flex items-center gap-6">
-                    <Link href="https://github.com/viniamaral" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
+                    <Link href="https://github.com/Tech-Lab-ai" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Github className="w-7 h-7" />
                     </Link>
                     <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">

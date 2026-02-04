@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 
@@ -24,7 +25,7 @@ export function Footer() {
           </div>
 
           <div className="flex items-center gap-8 text-sm text-muted-foreground">
-            <Link href="https://github.com/viniamaral" className="hover:text-foreground transition-colors">GitHub</Link>
+            <Link href="https://github.com/Tech-Lab-ai" className="hover:text-foreground transition-colors">GitHub</Link>
             <Link href="https://linkedin.com/in/viniamaral" className="hover:text-foreground transition-colors">LinkedIn</Link>
             <Link href="mailto:contact@viniamaral.com" className="hover:text-foreground transition-colors">Email</Link>
           </div>
