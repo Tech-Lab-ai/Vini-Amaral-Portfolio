@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -5,6 +6,7 @@ import Image from "next/image";
 import { Github, Linkedin, Mail, Menu, Command } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
+import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { name: "Engine", href: "#about" },
@@ -16,7 +18,7 @@ const navLinks = [
 export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <div className="absolute inset-0 bg-background/70 backdrop-blur-xl border-b border-white/5 shadow-2xl" />
+      <div className="absolute inset-0 bg-background/70 backdrop-blur-xl border-b border-border/10 shadow-sm" />
       <div className="container mx-auto px-4 h-20 flex items-center justify-between relative">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative">
@@ -25,7 +27,7 @@ export function Navbar() {
               alt="Vini Amaral" 
               width={200} 
               height={50} 
-              className="h-12 w-auto object-contain transition-transform group-hover:scale-105"
+              className="h-12 w-auto object-contain transition-transform group-hover:scale-105 dark:invert-0 invert"
               priority
             />
           </div>
@@ -46,9 +48,10 @@ export function Navbar() {
             ))}
           </div>
           
-          <div className="h-6 w-px bg-white/10 mx-2" />
+          <div className="h-6 w-px bg-border mx-2" />
           
           <div className="flex items-center gap-4">
+            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild className="rounded-full text-muted-foreground hover:text-primary">
               <Link href="https://github.com/viniamaral" target="_blank">
                 <Github className="w-5 h-5" />
@@ -66,14 +69,15 @@ export function Navbar() {
         </div>
 
         {/* Mobile Nav */}
-        <div className="md:hidden">
+        <div className="md:hidden flex items-center gap-4">
+          <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
-              <Button variant="ghost" size="icon" className="hover:bg-white/5">
+              <Button variant="ghost" size="icon" className="hover:bg-secondary">
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-l border-white/10 w-[80%]">
+            <SheetContent side="right" className="bg-background border-l border-border w-[80%]">
               <div className="flex flex-col gap-10 mt-16">
                 <div className="flex items-center gap-3 mb-4">
                   <Command className="w-8 h-8 text-primary" />
@@ -88,16 +92,16 @@ export function Navbar() {
                     {link.name}
                   </Link>
                 ))}
-                <div className="pt-10 border-t border-white/5 space-y-6">
+                <div className="pt-10 border-t border-border space-y-6">
                   <p className="text-xs uppercase tracking-widest text-muted-foreground font-bold">Social Intelligence</p>
                   <div className="flex items-center gap-6">
-                    <Link href="https://github.com/viniamaral" target="_blank" className="p-3 bg-secondary/50 rounded-2xl hover:text-primary transition-colors">
+                    <Link href="https://github.com/viniamaral" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Github className="w-7 h-7" />
                     </Link>
-                    <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="p-3 bg-secondary/50 rounded-2xl hover:text-primary transition-colors">
+                    <Link href="https://linkedin.com/in/viniamaral" target="_blank" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Linkedin className="w-7 h-7" />
                     </Link>
-                    <Link href="mailto:contact@viniamaral.com" className="p-3 bg-secondary/50 rounded-2xl hover:text-primary transition-colors">
+                    <Link href="mailto:contact@viniamaral.com" className="p-3 bg-secondary rounded-2xl hover:text-primary transition-colors">
                       <Mail className="w-7 h-7" />
                     </Link>
                   </div>
