@@ -1,0 +1,29 @@
+
+{
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "Professional developer portrait",
+      "imageUrl": "https://picsum.photos/seed/vini-avatar/400/400",
+      "imageHint": "professional developer"
+    },
+    {
+      "id": "project-1",
+      "description": "AI-powered dashboard screenshot",
+      "imageUrl": "https://picsum.photos/seed/project1/800/600",
+      "imageHint": "software dashboard"
+    },
+    {
+      "id": "project-2",
+      "description": "CLI tool interface visualization",
+      "imageUrl": "https://picsum.photos/seed/project2/800/600",
+      "imageHint": "terminal interface"
+    },
+    {
+      "id": "project-3",
+      "description": "Fullstack e-commerce application",
+      "imageUrl": "https://picsum.photos/seed/project3/800/600",
+      "imageHint": "ecommerce website"
+    }
+  ]
+}
