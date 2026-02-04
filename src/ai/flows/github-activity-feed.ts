@@ -1,10 +1,10 @@
 'use server';
 
 /**
- * @fileOverview This file defines a Genkit flow to fetch and classify Vini Amaral's latest GitHub activity.
+ * @fileOverview Este arquivo define um fluxo Genkit para buscar e classificar as issues do repositório CloudForge-CLI.
  *
- * The flow uses the GitHub API to retrieve recent events, then uses an LLM to classify
- * each event into a broad, human-readable summary.
+ * O fluxo utiliza a API do GitHub para recuperar issues recentes e, em seguida, utiliza um LLM para classificar
+ * cada item em um resumo legível e informativo.
  *
  * @exports {
  *   classifyGithubActivity,
@@ -17,11 +17,12 @@ import {ai} from '@/ai/genkit';
 import {z} from 'genkit';
 
 const GithubActivityInputSchema = z.object({
-  username: z.string().describe('The GitHub username to fetch activity for.'),
+  owner: z.string().describe('O proprietário do repositório (ex: Tech-Lab-ai).'),
+  repo: z.string().describe('O nome do repositório (ex: CloudForge-CLI).'),
 });
 export type GithubActivityInput = z.infer<typeof GithubActivityInputSchema>;
 
-const GithubActivityOutputSchema = z.array(z.string().describe('A human-readable classification of a GitHub activity item.'))
+const GithubActivityOutputSchema = z.array(z.string().describe('Uma classificação legível de uma issue ou atividade do GitHub.'));
 
 export type GithubActivityOutput = z.infer<typeof GithubActivityOutputSchema>;
 
@@ -31,14 +32,18 @@ export async function classifyGithubActivity(input: GithubActivityInput): Promis
 
 const githubActivityPrompt = ai.definePrompt({
   name: 'githubActivityPrompt',
-  input: {schema: z.object({
-    activity: z.string().describe('A Github activity item, represented as a JSON string.')
-  })},
-  output: {schema: z.string().describe('A human-readable classification of a GitHub activity item.')},
-  prompt: `Classify the following GitHub activity item into a broad, human-readable summary:
+  input: {
+    schema: z.object({
+      activity: z.string().describe('Uma issue do Github, representada como uma string JSON.')
+    })
+  },
+  output: {schema: z.string().describe('Uma classificação legível da issue.')},
+  prompt: `Você é um assistente técnico. Classifique a seguinte issue (problema/tarefa) do GitHub em um resumo curto, técnico e amigável em português:
 
-  Github Activity Item:
-  {{activity}}`,
+  Issue Item:
+  {{activity}}
+
+  Responda apenas com o resumo, focando no que está sendo discutido ou resolvido.`,
 });
 
 const githubActivityFlow = ai.defineFlow(
@@ -48,38 +53,54 @@ const githubActivityFlow = ai.defineFlow(
     outputSchema: GithubActivityOutputSchema,
   },
   async input => {
-    const githubUsername = input.username;
-    const githubApiUrl = `https://api.github.com/users/${githubUsername}/events/public`;
+    const { owner, repo } = input;
+    const githubApiUrl = `https://api.github.com/repos/${owner}/${repo}/issues?state=all&per_page=10`;
 
     try {
-      const response = await fetch(githubApiUrl);
+      const response = await fetch(githubApiUrl, {
+        headers: {
+          'Accept': 'application/vnd.github.v3+json',
+        }
+      });
+      
       if (!response.ok) {
         throw new Error(`GitHub API error: ${response.status} ${response.statusText}`);
       }
-      const activities = await response.json();
+      
+      const issues = await response.json();
 
-      if (!Array.isArray(activities)) {
-        throw new Error('Unexpected response from GitHub API: not an array.');
+      if (!Array.isArray(issues)) {
+        throw new Error('Resposta inesperada da API do GitHub: não é um array.');
       }
 
-      // Limit to the 10 most recent activities for brevity
-      const recentActivities = activities.slice(0, 10);
-
       const classifications: string[] = [];
-      for (const activity of recentActivities) {
+      for (const issue of issues) {
         try {
-          const {output} = await githubActivityPrompt({activity: JSON.stringify(activity)});
+          // Simplificamos o objeto para o prompt não ficar gigante
+          const simplifiedIssue = {
+            title: issue.title,
+            state: issue.state,
+            user: issue.user.login,
+            created_at: issue.created_at,
+            body: issue.body?.substring(0, 200) // apenas o início do corpo
+          };
+
+          const {output} = await githubActivityPrompt({activity: JSON.stringify(simplifiedIssue)});
           classifications.push(output!);
         } catch (error) {
-          console.error('Error classifying GitHub activity:', error);
-          classifications.push('Failed to classify activity.');
+          console.error('Erro ao classificar issue:', error);
+          classifications.push('Falha ao classificar atividade.');
         }
+      }
+
+      if (classifications.length === 0) {
+        return ["Nenhuma issue recente encontrada neste repositório."];
       }
 
       return classifications;
     } catch (error) {
-      console.error('Error fetching GitHub activity:', error);
-      return ["Failed to fetch Github activity"];
+      console.error('Erro ao buscar issues do GitHub:', error);
+      return ["Não foi possível carregar o feed de desenvolvimento no momento."];
     }
   }
 );
