@@ -20,7 +20,7 @@ export function Footer() {
               />
             </Link>
             <p className="text-sm text-muted-foreground">
-              © {currentYear} Vini Amaral. Built with Next.js & AI.
+              © {currentYear} Vini Amaral. Desenvolvido com Next.js & IA.
             </p>
           </div>
 

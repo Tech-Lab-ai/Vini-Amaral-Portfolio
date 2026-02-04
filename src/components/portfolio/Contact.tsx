@@ -32,10 +32,10 @@ export function Contact() {
           <div className="grid md:grid-cols-2 gap-16">
             <div className="space-y-8">
               <div className="space-y-4">
-                <h2 className="text-4xl font-bold">Get in touch</h2>
+                <h2 className="text-4xl font-bold">Entre em contato</h2>
                 <p className="text-muted-foreground text-lg">
-                  Looking for a senior developer for your next project, or just want to chat 
-                  about software architecture and AI? Let's connect.
+                  Procurando um desenvolvedor sênior para seu próximo projeto, ou quer apenas conversar 
+                  sobre arquitetura de software e IA? Vamos nos conectar.
                 </p>
               </div>
 
@@ -62,20 +62,20 @@ export function Contact() {
             <div className="relative">
               <div className="absolute inset-0 bg-primary/10 rounded-[40px] rotate-3 -z-10" />
               <div className="h-full bg-card border border-border p-8 md:p-12 rounded-[40px] flex flex-col justify-center gap-8">
-                <h3 className="text-2xl font-bold">Ready to ship?</h3>
+                <h3 className="text-2xl font-bold">Pronto para decolar?</h3>
                 <p className="text-muted-foreground">
-                  Whether it's a zero-to-one MVP, a complex system migration, 
-                  or AI integration, I bring the seniority needed to deliver 
-                  production-ready software.
+                  Seja um MVP do zero, uma migração de sistema complexa 
+                  ou integração de IA, trago a senioridade necessária para entregar 
+                  software pronto para produção.
                 </p>
                 <Button size="lg" className="w-full rounded-full py-8 text-lg" asChild>
                   <Link href="mailto:contact@viniamaral.com">
-                    Start a Conversation
+                    Iniciar uma Conversa
                   </Link>
                 </Button>
                 <div className="text-center">
                   <p className="text-sm text-muted-foreground">
-                    Available for freelance and permanent opportunities worldwide.
+                    Disponível para oportunidades freelance e permanentes em todo o mundo.
                   </p>
                 </div>
               </div>

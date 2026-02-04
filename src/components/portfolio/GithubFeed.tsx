@@ -18,7 +18,7 @@ export function GithubFeed() {
         setActivities(result);
       } catch (error) {
         console.error("Failed to fetch activity", error);
-        setActivities(["Could not fetch latest activity at this moment."]);
+        setActivities(["Não foi possível buscar as atividades recentes no momento."]);
       } finally {
         setLoading(false);
       }
@@ -33,11 +33,11 @@ export function GithubFeed() {
         <div className="max-w-4xl mx-auto space-y-12">
           <div className="text-center space-y-4">
             <Badge variant="outline" className="px-4 py-1 text-primary border-primary/20">
-              <Zap className="w-3 h-3 mr-2 fill-primary" /> Live Updates
+              <Zap className="w-3 h-3 mr-2 fill-primary" /> Atualizações ao Vivo
             </Badge>
-            <h2 className="text-3xl md:text-4xl font-bold">Latest Activity</h2>
+            <h2 className="text-3xl md:text-4xl font-bold">Últimas Atividades</h2>
             <p className="text-muted-foreground">
-              What I've been working on lately, classified by AI from my public GitHub events.
+              O que tenho desenvolvido ultimamente, classificado por IA a partir dos meus eventos públicos no GitHub.
             </p>
           </div>
 
@@ -45,14 +45,14 @@ export function GithubFeed() {
             <CardHeader>
               <CardTitle className="flex items-center gap-2 text-lg">
                 <GitBranch className="w-5 h-5 text-primary" />
-                Live Feed
+                Feed em Tempo Real
               </CardTitle>
             </CardHeader>
             <CardContent>
               {loading ? (
                 <div className="flex flex-col items-center justify-center py-12 gap-4 text-muted-foreground">
                   <Loader2 className="w-8 h-8 animate-spin text-primary" />
-                  <p className="animate-pulse">Analyzing GitHub events via AI...</p>
+                  <p className="animate-pulse">Analisando eventos do GitHub via IA...</p>
                 </div>
               ) : (
                 <ul className="space-y-4">

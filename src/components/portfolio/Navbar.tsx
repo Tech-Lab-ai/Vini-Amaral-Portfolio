@@ -9,10 +9,10 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
-  { name: "Engine", href: "#about" },
-  { name: "Projects", href: "#projects" },
-  { name: "Activity", href: "#activity" },
-  { name: "Connect", href: "#contact" },
+  { name: "Engenharia", href: "#about" },
+  { name: "Projetos", href: "#projects" },
+  { name: "Atividade", href: "#activity" },
+  { name: "Contato", href: "#contact" },
 ];
 
 export function Navbar() {
@@ -63,7 +63,7 @@ export function Navbar() {
               </Link>
             </Button>
             <Button size="sm" className="rounded-full px-5 bg-primary text-primary-foreground font-bold hover:opacity-90">
-              <Link href="#contact">Hire Me</Link>
+              <Link href="#contact">Contrate-me</Link>
             </Button>
           </div>
         </div>

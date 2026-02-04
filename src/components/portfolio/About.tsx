@@ -1,15 +1,16 @@
+
 import { CheckCircle2, Cpu, Code2, Cloud, Database, BrainCircuit } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
 
 const skillGroups = [
   { 
-    name: "Platform", 
+    name: "Plataforma", 
     items: ["Firebase", "Google Cloud", "AWS", "Docker"], 
     icon: Cloud,
     color: "text-primary"
   },
   { 
-    name: "Engineering", 
+    name: "Engenharia", 
     items: ["React", "Next.js", "TypeScript", "Tailwind"], 
     icon: Code2,
     color: "text-blue-400"
@@ -21,8 +22,8 @@ const skillGroups = [
     color: "text-emerald-400"
   },
   { 
-    name: "Intelligence", 
-    items: ["Genkit", "LLMs", "Vertex AI", "Vector Search"], 
+    name: "Inteligência", 
+    items: ["Genkit", "LLMs", "Vertex AI", "Busca Vetorial"], 
     icon: BrainCircuit,
     color: "text-accent"
   },
@@ -38,30 +39,30 @@ export function About() {
         <div className="grid lg:grid-cols-2 gap-20 items-center">
           <div className="space-y-8">
             <div className="space-y-4">
-              <Badge variant="outline" className="border-primary/30 text-primary">Technical Philosophy</Badge>
-              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Code is for Humans, <br /><span className="text-primary">Logic is for Machines.</span></h2>
+              <Badge variant="outline" className="border-primary/30 text-primary">Filosofia Técnica</Badge>
+              <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Código é para Humanos, <br /><span className="text-primary">Lógica é para Máquinas.</span></h2>
             </div>
             
             <div className="space-y-6 text-lg text-muted-foreground leading-relaxed font-body">
               <p>
-                I am a Senior Software Engineer dedicated to crafting systems that are 
-                as elegant in their architecture as they are performant in their execution. 
-                My focus lies at the intersection of modern cloud infrastructure and 
-                generative intelligence.
+                Sou um Engenheiro de Software Sênior dedicado a criar sistemas que são 
+                tão elegantes em sua arquitetura quanto performáticos em sua execução. 
+                Meu foco está na interseção entre infraestrutura de nuvem moderna e 
+                inteligência generativa.
               </p>
               <p>
-                Leveraging the Google Cloud ecosystem, I build applications that 
-                auto-scale to meet demand while maintaining the security and 
-                observability required for enterprise production.
+                Utilizando o ecossistema Google Cloud, construo aplicações que 
+                escalam automaticamente para atender à demanda, mantendo a segurança e 
+                observabilidade necessárias para produção corporativa.
               </p>
             </div>
             
             <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-4 gap-x-8 pt-4">
               {[
-                "Strategic Cloud Architecture",
-                "High-Precision Go Microservices",
-                "AI Agent Orchestration",
-                "Type-Safe Frontend Systems"
+                "Arquitetura de Nuvem Estratégica",
+                "Microserviços em Go de Alta Precisão",
+                "Orquestração de Agentes de IA",
+                "Sistemas Frontend Type-Safe"
               ].map((item) => (
                 <div key={item} className="flex items-center gap-3 group">
                   <div className="w-8 h-8 rounded-full bg-primary/10 flex items-center justify-center group-hover:bg-primary/20 transition-colors">

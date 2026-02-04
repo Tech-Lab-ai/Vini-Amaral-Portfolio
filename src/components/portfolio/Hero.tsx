@@ -17,12 +17,12 @@ export function Hero() {
           <div className="flex-1 space-y-8 text-center lg:text-left">
             <div className="space-y-4">
               <Badge variant="outline" className="py-1 px-4 border-primary/30 text-primary bg-primary/5 animate-in fade-in slide-in-from-bottom-3 duration-700">
-                <Sparkles className="w-3.5 h-3.5 mr-2" /> Senior Software Engineer
+                <Sparkles className="w-3.5 h-3.5 mr-2" /> Engenheiro de Software Sênior
               </Badge>
               <h1 className="text-5xl md:text-7xl font-bold font-headline leading-[1.1] tracking-tight">
-                Engineering <br />
+                Engenharia de <br />
                 <span className="bg-clip-text text-transparent bg-gradient-to-r from-primary via-blue-400 to-accent glow-text">
-                  Scalable Systems
+                  Sistemas Escaláveis
                 </span>
               </h1>
               <p className="text-lg md:text-xl text-muted-foreground max-w-2xl mx-auto lg:mx-0 font-body leading-relaxed">
@@ -82,7 +82,7 @@ export function Hero() {
               <div className="absolute -bottom-6 -left-6 p-4 glass rounded-2xl border shadow-xl animate-pulse">
                 <div className="flex items-center gap-2 text-[10px] font-bold text-accent uppercase tracking-tighter">
                   <div className="w-2 h-2 rounded-full bg-accent animate-ping" />
-                  System Active
+                  Sistema Ativo
                 </div>
               </div>
             </div>

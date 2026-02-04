@@ -4,8 +4,8 @@ import './globals.css';
 import { ThemeProvider } from '@/components/theme-provider';
 
 export const metadata: Metadata = {
-  title: 'Vini Amaral — Software Developer | Fullstack & AI',
-  description: 'Senior Software Developer specializing in React, Next.js, Node.js, Go, and AI integration. Building practical and experimental software solutions.',
+  title: 'Vini Amaral — Desenvolvedor de Software | Fullstack & IA',
+  description: 'Desenvolvedor de Software Sênior especializado em React, Next.js, Node.js, Go e integração de IA. Construindo soluções de software práticas e experimentais.',
 };
 
 export default function RootLayout({
@@ -14,7 +14,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <head>
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />

@@ -10,7 +10,7 @@ const projects = [
   {
     id: "project-1",
     title: "InsightAI Engine",
-    description: "Enterprise-grade RAG pipeline using Google Vertex AI and Vector Search for real-time document intelligence.",
+    description: "Pipeline RAG de nível empresarial usando Google Vertex AI e Vector Search para inteligência de documentos em tempo real.",
     tags: ["Genkit", "Vertex AI", "Next.js", "Firebase"],
     icon: Bot,
     github: "https://github.com/Tech-Lab-ai",
@@ -19,7 +19,7 @@ const projects = [
   {
     id: "project-2",
     title: "CloudForge CLI",
-    description: "A specialized Go-based CLI tool for automated cloud resource provisioning and environment synchronization.",
+    description: "Uma ferramenta CLI especializada em Go para provisionamento automatizado de recursos em nuvem e sincronização de ambientes.",
     tags: ["Golang", "Cloud SDK", "gRPC", "Docker"],
     icon: Zap,
     github: "https://github.com/Tech-Lab-ai",
@@ -28,7 +28,7 @@ const projects = [
   {
     id: "project-3",
     title: "EventStreamer Pro",
-    description: "High-throughput event processing engine capable of handling 50k+ events/sec with minimal cold start latency.",
+    description: "Mecanismo de processamento de eventos de alto rendimento capaz de lidar com mais de 50k eventos/seg com latência mínima.",
     tags: ["Node.js", "PubSub", "Redis", "Cloud Run"],
     icon: Layers,
     github: "https://github.com/Tech-Lab-ai",
@@ -43,12 +43,12 @@ export function Projects() {
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
           <div className="space-y-4 max-w-2xl">
             <Badge variant="outline" className="border-accent/30 text-accent uppercase tracking-widest text-[10px] font-bold">
-              Portfolio
+              Portfólio
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Featured Engineering</h2>
+            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Destaques de Engenharia</h2>
             <p className="text-muted-foreground text-lg leading-relaxed">
-              Exploring the intersection of performance and intelligence. These projects 
-              represent my focus on high-scale cloud architecture and AI integration.
+              Explorando a interseção entre performance e inteligência. Estes projetos 
+              representam meu foco em arquitetura de nuvem em larga escala e integração de IA.
             </p>
           </div>
           <Link 
@@ -56,7 +56,7 @@ export function Projects() {
             target="_blank" 
             className="group flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition-all"
           >
-            All Repositories <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
+            Todos os Repositórios <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
           </Link>
         </div>
 
@@ -100,10 +100,10 @@ export function Projects() {
                 
                 <CardFooter className="pb-6 pt-4 flex gap-6 border-t border-white/5 mx-6 px-0">
                   <Link href={project.github} className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors">
-                    <Github className="w-4 h-4" /> Source Code
+                    <Github className="w-4 h-4" /> Código Fonte
                   </Link>
                   <Link href={project.demo} className="flex items-center gap-2 text-xs font-bold text-primary hover:text-primary/80 transition-colors">
-                    <ExternalLink className="w-4 h-4" /> Live System
+                    <ExternalLink className="w-4 h-4" /> Sistema Online
                   </Link>
                 </CardFooter>
               </Card>
