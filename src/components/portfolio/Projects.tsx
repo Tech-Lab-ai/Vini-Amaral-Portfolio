@@ -13,7 +13,7 @@ const projects = [
     description: "Pipeline RAG de nível empresarial usando Google Vertex AI e Vector Search para inteligência de documentos em tempo real.",
     tags: ["Genkit", "Vertex AI", "Next.js", "Firebase"],
     icon: Bot,
-    github: "https://github.com/Tech-Lab-ai",
+    github: "https://github.com/Tech-Lab-ai/InsightAI-Engine.git",
     demo: "#",
   },
   {
@@ -22,7 +22,7 @@ const projects = [
     description: "Uma ferramenta CLI especializada em Go para provisionamento automatizado de recursos em nuvem e sincronização de ambientes.",
     tags: ["Golang", "Cloud SDK", "gRPC", "Docker"],
     icon: Zap,
-    github: "https://github.com/Tech-Lab-ai",
+    github: "https://github.com/Tech-Lab-ai/CloudForge-CLI.git",
     demo: "#",
   },
   {
@@ -31,7 +31,7 @@ const projects = [
     description: "Mecanismo de processamento de eventos de alto rendimento capaz de lidar com mais de 50k eventos/seg com latência mínima.",
     tags: ["Node.js", "PubSub", "Redis", "Cloud Run"],
     icon: Layers,
-    github: "https://github.com/Tech-Lab-ai",
+    github: "https://github.com/Tech-Lab-ai/EventStreamer-Pro.git",
     demo: "#",
   }
 ];
@@ -99,7 +99,7 @@ export function Projects() {
                 </CardContent>
                 
                 <CardFooter className="pb-6 pt-4 flex gap-6 border-t border-white/5 mx-6 px-0">
-                  <Link href={project.github} className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors">
+                  <Link href={project.github} target="_blank" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors">
                     <Github className="w-4 h-4" /> Código Fonte
                   </Link>
                   <Link href={project.demo} className="flex items-center gap-2 text-xs font-bold text-primary hover:text-primary/80 transition-colors">
