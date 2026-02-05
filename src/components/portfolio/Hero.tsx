@@ -77,11 +77,11 @@ export function Hero() {
             </div>
           </div>
 
-          <div className="relative group w-full max-w-[580px] lg:flex-1">
+          <div className="relative group w-full max-w-[520px] lg:flex-1">
             {/* Visual Frame */}
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/40 to-accent/40 rounded-[3rem] blur-3xl opacity-20 group-hover:opacity-30 transition-opacity duration-700" />
             
-            <div className="relative aspect-square w-full rounded-[2.5rem] overflow-hidden border border-white/10 p-2 bg-black/40 backdrop-blur-3xl shadow-[0_0_80px_-20px_rgba(3,155,229,0.3)] flex items-center justify-center transition-transform duration-700 group-hover:scale-[1.01]">
+            <div className="relative aspect-square w-full rounded-[2.5rem] overflow-hidden border border-white/10 p-1.5 bg-white/5 backdrop-blur-sm shadow-[0_0_80px_-20px_rgba(3,155,229,0.2)] flex items-center justify-center transition-transform duration-700 group-hover:scale-[1.01]">
               <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden">
                 <Image
                   src="/Marketing%20material%20i.png"
@@ -92,30 +92,30 @@ export function Hero() {
                   data-ai-hint="developer engineering"
                 />
                 
-                {/* Floating UI Elements */}
-                <div className="absolute top-6 right-6 p-4 glass rounded-2xl border shadow-2xl animate-float z-20">
-                   <div className="flex items-center gap-3">
-                      <div className="w-10 h-10 rounded-xl bg-primary/20 flex items-center justify-center">
-                        <Cpu className="w-6 h-6 text-primary" />
+                {/* Minimalist Floating UI Elements */}
+                <div className="absolute top-4 right-4 p-2.5 glass rounded-xl border shadow-xl animate-float z-20">
+                   <div className="flex items-center gap-2">
+                      <div className="w-7 h-7 rounded-lg bg-primary/20 flex items-center justify-center">
+                        <Cpu className="w-4 h-4 text-primary" />
                       </div>
                       <div>
-                        <p className="text-[10px] font-bold uppercase text-muted-foreground leading-none mb-1">Status</p>
-                        <p className="text-sm font-bold">Produção OK</p>
+                        <p className="text-[8px] font-bold uppercase text-muted-foreground leading-none">Status</p>
+                        <p className="text-[10px] font-bold">Produção OK</p>
                       </div>
                    </div>
                 </div>
 
-                <div className="absolute bottom-6 left-6 p-5 glass rounded-2xl border shadow-2xl z-20">
-                  <div className="space-y-3">
+                <div className="absolute bottom-4 left-4 p-3 glass rounded-xl border shadow-xl z-20">
+                  <div className="space-y-2">
                     <div className="flex items-center gap-2">
-                      <div className="w-2 h-2 rounded-full bg-emerald-500 animate-ping" />
-                      <p className="text-[10px] font-bold text-emerald-400 uppercase tracking-widest">Servidor Online</p>
+                      <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
+                      <p className="text-[8px] font-bold text-emerald-400 uppercase tracking-widest">Servidor Online</p>
                     </div>
-                    <div className="flex gap-2">
-                      <div className="w-8 h-1 bg-primary/40 rounded-full overflow-hidden">
+                    <div className="flex gap-1.5">
+                      <div className="w-6 h-0.5 bg-primary/40 rounded-full overflow-hidden">
                         <div className="w-3/4 h-full bg-primary" />
                       </div>
-                      <div className="w-8 h-1 bg-accent/40 rounded-full overflow-hidden">
+                      <div className="w-6 h-0.5 bg-accent/40 rounded-full overflow-hidden">
                         <div className="w-1/2 h-full bg-accent" />
                       </div>
                     </div>
@@ -127,26 +127,5 @@ export function Hero() {
         </div>
       </div>
     </section>
-  );
-}
-
-function CodeXml(props: any) {
-  return (
-    <svg
-      {...props}
-      xmlns="http://www.w3.org/2000/svg"
-      width="24"
-      height="24"
-      viewBox="0 0 24 24"
-      fill="none"
-      stroke="currentColor"
-      strokeWidth="2"
-      strokeLinecap="round"
-      strokeLinejoin="round"
-    >
-      <path d="m18 16 4-4-4-4" />
-      <path d="m6 8-4 4 4 4" />
-      <path d="m14.5 4-5 16" />
-    </svg>
   );
 }

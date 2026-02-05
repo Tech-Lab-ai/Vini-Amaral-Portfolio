@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Github, Layers, Zap, Bot, ArrowUpRight } from "lucide-react";
@@ -66,7 +67,7 @@ export function Projects() {
             return (
               <Card key={project.id} className="project-card-hover group border-white/5 bg-card/20 backdrop-blur-3xl flex flex-col h-full overflow-hidden rounded-[2.5rem] shadow-2xl">
                 <div className="relative aspect-[16/10] overflow-hidden m-3 rounded-[1.8rem]">
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-700 z-10" />
+                  {/* Overlay removed for better image clarity */}
                   <Image
                     src={image?.imageUrl || ""}
                     alt={project.title}
