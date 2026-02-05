@@ -26,9 +26,9 @@ export function Navbar() {
             <Image 
               src="/logo_vini.png" 
               alt="Vini Amaral" 
-              width={400} 
-              height={100} 
-              className="h-16 w-auto object-contain transition-transform group-hover:scale-105 dark:invert-0 invert"
+              width={600} 
+              height={150} 
+              className="h-24 w-auto object-contain transition-transform group-hover:scale-105 dark:invert-0 invert"
               priority
             />
           </div>
