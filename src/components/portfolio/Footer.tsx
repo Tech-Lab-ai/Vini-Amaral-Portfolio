@@ -16,9 +16,9 @@ export function Footer() {
               <Image 
                 src="/logo_vini.png" 
                 alt="Vini Amaral" 
-                width={180} 
-                height={45} 
-                className="h-10 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity dark:invert-0 invert"
+                width={360} 
+                height={90} 
+                className="h-16 w-auto object-contain opacity-90 hover:opacity-100 transition-opacity dark:invert-0 invert"
               />
             </Link>
             <p className="text-sm text-muted-foreground text-center md:text-left leading-relaxed max-w-xs">

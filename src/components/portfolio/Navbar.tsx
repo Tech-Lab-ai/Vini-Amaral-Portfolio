@@ -1,3 +1,4 @@
+
 "use client";
 
 import Link from "next/link";
@@ -19,15 +20,15 @@ export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
       <div className="absolute inset-0 bg-background/70 backdrop-blur-xl border-b border-border/10 shadow-sm" />
-      <div className="container mx-auto px-4 h-20 flex items-center justify-between relative">
+      <div className="container mx-auto px-4 h-28 flex items-center justify-between relative">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative">
             <Image 
               src="/logo_vini.png" 
               alt="Vini Amaral" 
-              width={200} 
-              height={50} 
-              className="h-12 w-auto object-contain transition-transform group-hover:scale-105 dark:invert-0 invert"
+              width={400} 
+              height={100} 
+              className="h-16 w-auto object-contain transition-transform group-hover:scale-105 dark:invert-0 invert"
               priority
             />
           </div>
