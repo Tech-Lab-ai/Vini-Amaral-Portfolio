@@ -3,7 +3,7 @@
 
 import Link from "next/link";
 import Image from "next/image";
-import { Github, Linkedin, Mail, Menu, Command, Facebook, MessageCircle } from "lucide-react";
+import { Github, Linkedin, Mail, Menu, Command, Facebook, MessageCircle, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { ThemeToggle } from "./ThemeToggle";
@@ -11,7 +11,7 @@ import { ThemeToggle } from "./ThemeToggle";
 const navLinks = [
   { name: "Engenharia", href: "#about" },
   { name: "Projetos", href: "#projects" },
-  { name: "Pagamento", href: "#payments" },
+  { name: "Apoiar", href: "#support" },
   { name: "Asaas", href: "#asaas-partner" },
   { name: "Contato", href: "#contact" },
 ];
