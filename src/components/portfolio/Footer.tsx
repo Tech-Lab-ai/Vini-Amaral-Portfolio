@@ -1,3 +1,4 @@
+
 import Link from "next/link";
 import Image from "next/image";
 import { Heart, ArrowUpRight } from "lucide-react";
@@ -46,9 +47,9 @@ export function Footer() {
             <Link 
               href="https://www.asaas.com/c/2h5zwl883x3g3erc" 
               target="_blank"
-              className="flex items-center gap-2 px-6 py-3 rounded-2xl bg-accent text-accent-foreground font-bold text-sm hover:scale-105 transition-all shadow-lg shadow-accent/20"
+              className="flex items-center gap-2 px-6 py-4 rounded-2xl bg-accent text-accent-foreground font-bold text-sm hover:scale-105 transition-all shadow-xl shadow-accent/20 group"
             >
-              <Heart className="w-4 h-4 fill-current" /> Apoiar via Asaas
+              <Heart className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" /> Apoiar ou Contratar
             </Link>
           </div>
         </div>
