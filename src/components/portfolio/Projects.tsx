@@ -1,4 +1,3 @@
-
 import Image from "next/image";
 import Link from "next/link";
 import { ExternalLink, Github, Layers, Zap, Bot, ArrowUpRight } from "lucide-react";
@@ -46,15 +45,15 @@ export function Projects() {
       <div className="container mx-auto px-4">
         <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24">
           <div className="space-y-6 max-w-2xl">
-            <Badge variant="outline" className="border-accent/40 text-accent uppercase tracking-widest text-[10px] font-bold bg-accent/5 px-4 py-1">
+            <Badge variant="outline" className="border-accent/50 text-accent uppercase tracking-widest text-[10px] font-bold bg-accent/10 px-4 py-1">
               Showcase de Engenharia
             </Badge>
             <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">Sistemas em Produção</h2>
-            <p className="text-xl text-muted-foreground font-light leading-relaxed">
+            <p className="text-xl text-foreground/80 font-light leading-relaxed">
               Explorações avançadas em sistemas distribuídos e inteligência artificial. Cada projeto foca em alta disponibilidade e performance.
             </p>
           </div>
-          <Button variant="ghost" className="group text-primary font-bold gap-2 hover:bg-primary/10 rounded-xl px-6 py-6" asChild>
+          <Button variant="ghost" className="group text-primary font-bold gap-2 hover:bg-primary/10 rounded-xl px-6 py-6 border border-primary/20" asChild>
             <Link href="https://github.com/Tech-Lab-ai" target="_blank">
               Todos os Repositórios <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
             </Link>
@@ -65,23 +64,22 @@ export function Projects() {
           {projects.map((project) => {
             const image = PlaceHolderImages.find((img) => img.id === project.id);
             return (
-              <Card key={project.id} className="project-card-hover group border-white/5 bg-card/20 backdrop-blur-3xl flex flex-col h-full overflow-hidden rounded-[2.5rem] shadow-2xl">
-                <div className="relative aspect-[16/10] overflow-hidden m-3 rounded-[1.8rem]">
-                  {/* Overlay removed for better image clarity */}
+              <Card key={project.id} className="project-card-hover group border-white/20 bg-card/40 backdrop-blur-3xl flex flex-col h-full overflow-hidden rounded-[2.5rem] shadow-xl">
+                <div className="relative aspect-[16/10] overflow-hidden m-3 rounded-[1.8rem] border border-white/10">
                   <Image
                     src={image?.imageUrl || ""}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
+                    className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out brightness-110 saturate-[1.1]"
                     data-ai-hint={image?.imageHint}
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <div className="p-3 glass rounded-2xl border-white/10 shadow-2xl">
+                    <div className="p-3 glass rounded-2xl border-white/30 shadow-2xl">
                       <project.icon className="w-6 h-6 text-primary" />
                     </div>
                   </div>
                   <div className="absolute bottom-4 right-4 z-20">
-                    <Badge className="bg-black/60 backdrop-blur-md border-white/10 text-[10px] font-bold py-1 px-3">
+                    <Badge className="bg-primary text-white border-white/20 text-[10px] font-bold py-1 px-3 shadow-lg">
                       {project.metric}
                     </Badge>
                   </div>
@@ -95,20 +93,20 @@ export function Projects() {
                       </span>
                     ))}
                   </div>
-                  <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors tracking-tight">{project.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors tracking-tight text-foreground">{project.title}</CardTitle>
                 </CardHeader>
                 
                 <CardContent className="flex-1 px-8 pb-8">
-                  <p className="text-muted-foreground text-sm leading-relaxed font-light">
+                  <p className="text-foreground/70 text-sm leading-relaxed font-light">
                     {project.description}
                   </p>
                 </CardContent>
                 
-                <CardFooter className="px-8 py-6 border-t border-white/5 bg-white/[0.02] flex items-center justify-between">
-                  <Link href={project.github} target="_blank" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors">
+                <CardFooter className="px-8 py-6 border-t border-white/10 bg-white/5 flex items-center justify-between">
+                  <Link href={project.github} target="_blank" className="flex items-center gap-2 text-xs font-bold text-foreground/60 hover:text-primary transition-colors">
                     <Github className="w-4 h-4" /> Código Fonte
                   </Link>
-                  <Button variant="ghost" size="sm" className="rounded-xl group/btn h-10 px-4 bg-primary/5 hover:bg-primary hover:text-white" asChild>
+                  <Button variant="ghost" size="sm" className="rounded-xl group/btn h-10 px-4 bg-primary/10 hover:bg-primary hover:text-white border border-primary/20" asChild>
                     <Link href={project.demo} className="flex items-center gap-2 text-xs font-bold">
                       Acessar <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
                     </Link>

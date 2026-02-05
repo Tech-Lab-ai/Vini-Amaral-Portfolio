@@ -32,25 +32,25 @@
   }
 
   .dark {
-    --background: 220 30% 7%;
+    --background: 220 20% 10%;
     --foreground: 210 40% 98%;
-    --card: 220 30% 10%;
+    --card: 220 20% 14%;
     --card-foreground: 210 40% 98%;
-    --popover: 220 30% 7%;
+    --popover: 220 20% 10%;
     --popover-foreground: 210 40% 98%;
-    --primary: 199 89% 48%;
+    --primary: 199 89% 55%;
     --primary-foreground: 210 40% 98%;
-    --secondary: 215 25% 15%;
+    --secondary: 215 20% 18%;
     --secondary-foreground: 210 40% 98%;
-    --muted: 215 25% 15%;
-    --muted-foreground: 215 20% 65%;
-    --accent: 45 100% 58%;
+    --muted: 215 20% 18%;
+    --muted-foreground: 215 20% 75%;
+    --accent: 45 100% 65%;
     --accent-foreground: 220 30% 7%;
     --destructive: 0 84% 60%;
     --destructive-foreground: 210 40% 98%;
-    --border: 215 25% 18%;
-    --input: 215 25% 18%;
-    --ring: 199 89% 48%;
+    --border: 215 20% 22%;
+    --input: 215 20% 22%;
+    --ring: 199 89% 55%;
   }
 }
 
@@ -61,19 +61,19 @@
   body {
     @apply bg-background text-foreground selection:bg-primary/30 antialiased;
     background-image: 
-      radial-gradient(circle at 50% 0%, hsla(199, 89%, 48%, 0.1) 0%, transparent 50%),
-      radial-gradient(circle at 0% 100%, hsla(45, 100%, 58%, 0.05) 0%, transparent 40%),
-      linear-gradient(to right, hsla(210, 40%, 98%, 0.02) 1px, transparent 1px),
-      linear-gradient(to bottom, hsla(210, 40%, 98%, 0.02) 1px, transparent 1px);
+      radial-gradient(circle at 50% 0%, hsla(199, 89%, 48%, 0.15) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, hsla(45, 100%, 58%, 0.08) 0%, transparent 40%),
+      linear-gradient(to right, hsla(210, 40%, 98%, 0.03) 1px, transparent 1px),
+      linear-gradient(to bottom, hsla(210, 40%, 98%, 0.03) 1px, transparent 1px);
     background-size: 100% 100%, 100% 100%, 40px 40px, 40px 40px;
   }
   
   .dark body {
     background-image: 
-      radial-gradient(circle at 50% 0%, hsla(199, 89%, 48%, 0.15) 0%, transparent 50%),
-      radial-gradient(circle at 0% 100%, hsla(45, 100%, 58%, 0.08) 0%, transparent 40%),
-      linear-gradient(to right, hsla(215, 25%, 15%, 0.2) 1px, transparent 1px),
-      linear-gradient(to bottom, hsla(215, 25%, 15%, 0.2) 1px, transparent 1px);
+      radial-gradient(circle at 50% 0%, hsla(199, 89%, 48%, 0.2) 0%, transparent 50%),
+      radial-gradient(circle at 0% 100%, hsla(45, 100%, 58%, 0.1) 0%, transparent 40%),
+      linear-gradient(to right, hsla(215, 25% , 25%, 0.3) 1px, transparent 1px),
+      linear-gradient(to bottom, hsla(215, 25%, 25%, 0.3) 1px, transparent 1px);
   }
 
   h1, h2, h3, h4, h5, h6 {
@@ -82,19 +82,19 @@
 }
 
 .glass {
-  @apply bg-background/40 backdrop-blur-2xl border border-white/5;
+  @apply bg-white/10 dark:bg-white/[0.08] backdrop-blur-2xl border border-white/20;
 }
 
 .project-card-hover {
-  @apply transition-all duration-500 hover:translate-y-[-12px] hover:shadow-[0_20px_40px_-15px_rgba(3,155,229,0.3)] hover:border-primary/50;
+  @apply transition-all duration-500 hover:translate-y-[-12px] hover:shadow-[0_20px_50px_-15px_rgba(3,155,229,0.4)] hover:border-primary/60;
 }
 
 .glow-text {
-  text-shadow: 0 0 30px hsla(199, 89%, 48%, 0.5);
+  text-shadow: 0 0 30px hsla(199, 89%, 48%, 0.6);
 }
 
 .tech-badge {
-  @apply bg-secondary/50 border border-border px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-muted-foreground;
+  @apply bg-primary/10 border border-primary/20 px-3 py-1 rounded-full text-[10px] font-bold uppercase tracking-wider text-primary;
 }
 
 /* Animations */
