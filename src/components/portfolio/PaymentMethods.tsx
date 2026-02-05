@@ -102,8 +102,9 @@ export function PaymentMethods() {
                 </div>
               </div>
 
-              <div className="p-1 rounded-[2.5rem] bg-gradient-to-br from-white/10 to-transparent shadow-2xl">
-                <div className="p-8 md:p-10 rounded-[2.4rem] bg-black/60 backdrop-blur-3xl border border-white/10 space-y-8 h-full">
+              <div className="p-1 rounded-[2.5rem] bg-gradient-to-br from-primary/20 to-transparent shadow-2xl">
+                {/* Alterado de bg-black/60 para bg-white/10 com backdrop blur mais intenso para ficar CLARO */}
+                <div className="p-8 md:p-10 rounded-[2.4rem] bg-white/10 dark:bg-white/[0.08] backdrop-blur-3xl border border-white/20 space-y-8 h-full">
                   <div className="flex items-center justify-between">
                     <div className="flex items-center gap-3">
                       <div className="w-12 h-12 rounded-xl bg-primary/20 flex items-center justify-center border border-primary/20 shadow-lg shadow-primary/10">
@@ -117,7 +118,7 @@ export function PaymentMethods() {
                     <Badge className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-3 py-1 font-bold text-[10px] animate-pulse">API ONLINE</Badge>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-6 relative group">
+                  <div className="p-6 rounded-2xl bg-primary/5 border border-primary/10 space-y-6 relative group">
                     <div className="flex items-start gap-3">
                       <Info className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                       <p className="text-sm text-foreground/80 italic leading-relaxed font-light">
@@ -125,7 +126,7 @@ export function PaymentMethods() {
                       </p>
                     </div>
                     
-                    <div className="pt-4 border-t border-white/5">
+                    <div className="pt-4 border-t border-white/10">
                       <p className="text-[10px] text-muted-foreground/60 uppercase font-bold tracking-[0.2em] flex items-center justify-center gap-2">
                         <ArrowRight className="w-3 h-3 text-primary" /> Checkout Gerenciado via Webhook
                       </p>
@@ -133,7 +134,7 @@ export function PaymentMethods() {
                   </div>
                   
                   <div className="text-center pt-2">
-                    <p className="text-[10px] text-muted-foreground/40 font-code uppercase tracking-[0.3em] flex items-center justify-center gap-3">
+                    <p className="text-[10px] text-muted-foreground/60 font-code uppercase tracking-[0.3em] flex items-center justify-center gap-3">
                       <span className="w-1.5 h-1.5 rounded-full bg-primary animate-pulse shadow-[0_0_8px_rgba(3,155,229,0.8)]" />
                       Transaction Reference: CF-{txId || '......'}
                     </p>
