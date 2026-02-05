@@ -70,31 +70,27 @@ export function AsaasPromotion() {
               </div>
             </div>
 
-            <div className="relative">
-              <div className="absolute inset-0 bg-blue-500/10 rounded-[3rem] blur-3xl -z-10" />
-              <div className="relative aspect-video rounded-[2.5rem] overflow-hidden border border-white/10 shadow-2xl bg-black/20 backdrop-blur-3xl p-4 group">
-                <div className="relative w-full h-full rounded-[2rem] overflow-hidden">
-                  <Image 
-                    src="/assas-.png" 
-                    alt="Asaas API Interface" 
-                    fill 
-                    className="object-cover transition-transform duration-700 group-hover:scale-105"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent opacity-0 group-hover:opacity-100 transition-opacity flex items-end p-8">
-                    <p className="text-white text-sm font-medium">Dashboard profissional e intuitivo para desenvolvedores.</p>
-                  </div>
-                </div>
+            <div className="relative flex items-center justify-center">
+              <div className="absolute inset-0 bg-blue-500/15 rounded-full blur-[120px] -z-10" />
+              <div className="relative w-full max-w-[480px] aspect-square flex items-center justify-center">
+                <Image 
+                  src="/assas-.png" 
+                  alt="Asaas Logo" 
+                  fill 
+                  className="object-contain"
+                  priority
+                />
               </div>
               
-              {/* Floating Element */}
-              <div className="absolute -bottom-6 -right-6 glass p-6 rounded-2xl border-white/10 shadow-2xl animate-float hidden md:block">
+              {/* Floating Element - Agora mais discreto e posicionado em relação à logo */}
+              <div className="absolute bottom-0 right-0 glass p-4 rounded-2xl border-white/10 shadow-2xl animate-float hidden md:block">
                 <div className="flex items-center gap-3">
-                  <div className="w-10 h-10 rounded-full bg-emerald-500/20 flex items-center justify-center">
-                    <CheckCircle2 className="w-6 h-6 text-emerald-500" />
+                  <div className="w-8 h-8 rounded-full bg-emerald-500/20 flex items-center justify-center">
+                    <CheckCircle2 className="w-5 h-5 text-emerald-500" />
                   </div>
                   <div>
-                    <p className="text-[10px] font-bold uppercase text-muted-foreground leading-none">Status da API</p>
-                    <p className="text-sm font-bold text-foreground">99.99% Uptime</p>
+                    <p className="text-[8px] font-bold uppercase text-muted-foreground leading-none">Uptime</p>
+                    <p className="text-xs font-bold text-foreground">99.99%</p>
                   </div>
                 </div>
               </div>
