@@ -64,6 +64,21 @@ export function Footer() {
             Status: System Operational // Next.js + Genkit AI
           </p>
         </div>
+
+        {/* Seção de Pagamento Final */}
+        <div className="mt-12 pt-8 flex flex-col items-center gap-4 text-center">
+          <p className="text-[10px] font-bold text-muted-foreground/50 uppercase tracking-[0.2em]">
+            Aceitamos os cartões em até 20 vezes
+          </p>
+          <div className="relative w-full max-w-[320px] h-12 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+            <Image 
+              src="/bandeiras.png" 
+              alt="Bandeiras de Cartão" 
+              fill
+              className="object-contain"
+            />
+          </div>
+        </div>
       </div>
     </footer>
   );
