@@ -60,4 +60,4 @@ O projeto foi construído com as tecnologias mais modernas do mercado para garan
 Este projeto é de uso pessoal e profissional. Sinta-se à vontade para explorar o código como referência.
 
 ---
-Desenvolvido com ❤️ por Vini Amaral.
+Desenvolvido com ❤️ por Vini Amaral.# Vini-Amaral-Portfolio
