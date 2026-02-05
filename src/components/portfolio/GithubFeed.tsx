@@ -9,8 +9,12 @@ import { Loader2, Terminal, Activity, History, ChevronRight, Cpu, Globe, Lock } 
 export function GithubFeed() {
   const [activities, setActivities] = useState<string[]>([]);
   const [loading, setLoading] = useState(true);
+  const [currentTime, setCurrentTime] = useState<string | null>(null);
 
   useEffect(() => {
+    // Definir o horário apenas no cliente para evitar erro de hidratação
+    setCurrentTime(new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' }));
+
     async function fetchActivity() {
       try {
         const result = await classifyGithubActivity({ 
@@ -84,9 +88,11 @@ export function GithubFeed() {
                     tech-lab-cli --verbose --analyze
                   </CardTitle>
                 </div>
-                <Badge variant="outline" className="font-code text-[10px] border-white/20 text-foreground/60 bg-white/5">
-                  UTC-3: {new Date().toLocaleTimeString('pt-BR', { hour: '2-digit', minute: '2-digit' })}
-                </Badge>
+                {currentTime && (
+                  <Badge variant="outline" className="font-code text-[10px] border-white/20 text-foreground/60 bg-white/5">
+                    UTC-3: {currentTime}
+                  </Badge>
+                )}
               </CardHeader>
               
               <CardContent className="p-0">
