@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, ArrowRight, Terminal, Sparkles, MessageCircle, Code2, Cpu } from "lucide-react";
@@ -83,11 +84,12 @@ export function Hero() {
             <div className="relative aspect-square w-full rounded-[2.5rem] overflow-hidden border border-white/10 p-2 bg-black/40 backdrop-blur-3xl shadow-[0_0_80px_-20px_rgba(3,155,229,0.3)] flex items-center justify-center transition-transform duration-700 group-hover:scale-[1.01]">
               <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden">
                 <Image
-                  src="/Marketing material i.png"
+                  src="/Marketing%20material%20i.png"
                   alt="Vini Amaral - Senior Engineer"
                   fill
                   className="object-cover brightness-110 saturate-[1.1]"
                   priority
+                  data-ai-hint="developer engineering"
                 />
                 
                 {/* Floating UI Elements */}
@@ -125,5 +127,26 @@ export function Hero() {
         </div>
       </div>
     </section>
+  );
+}
+
+function CodeXml(props: any) {
+  return (
+    <svg
+      {...props}
+      xmlns="http://www.w3.org/2000/svg"
+      width="24"
+      height="24"
+      viewBox="0 0 24 24"
+      fill="none"
+      stroke="currentColor"
+      strokeWidth="2"
+      strokeLinecap="round"
+      strokeLinejoin="round"
+    >
+      <path d="m18 16 4-4-4-4" />
+      <path d="m6 8-4 4 4 4" />
+      <path d="m14.5 4-5 16" />
+    </svg>
   );
 }

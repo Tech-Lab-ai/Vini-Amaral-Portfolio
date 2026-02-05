@@ -1,3 +1,28 @@
 {
-  "placeholderImages": []
+  "placeholderImages": [
+    {
+      "id": "avatar",
+      "description": "Professional developer portrait",
+      "imageUrl": "https://images.unsplash.com/photo-1752170080627-0324ede1ddf2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxwcm9mZXNzaW9uYWwlMjBkZXZlbG9wZXJ8ZW58MHx8fHwxNzcwMjUwMjYxfDA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "professional developer"
+    },
+    {
+      "id": "project-1",
+      "description": "AI-powered dashboard screenshot",
+      "imageUrl": "https://images.unsplash.com/photo-1669023414180-4dcf35d943e1?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw5fHxzb2Z0d2FyZSUyMGRhc2hib2FyZHxlbnwwfHx8fDE3NzAxODgxOTl8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "software dashboard"
+    },
+    {
+      "id": "project-2",
+      "description": "CLI tool interface visualization",
+      "imageUrl": "https://images.unsplash.com/photo-1763543016726-7611715ca0e2?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHwyfHx0ZXJtaW5hbCUyMGludGVyZmFjZXxlbnwwfHx8fDE3NzAyNTAyNjF8MA&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "terminal interface"
+    },
+    {
+      "id": "project-3",
+      "description": "Fullstack e-commerce application",
+      "imageUrl": "https://images.unsplash.com/photo-1472851294608-062f824d29cc?crop=entropy&cs=tinysrgb&fit=max&fm=jpg&ixid=M3w3NDE5ODJ8MHwxfHNlYXJjaHw4fHxlY29tbWVyY2UlMjB3ZWJzaXRlfGVufDB8fHx8MTc3MDE2ODk3M3ww&ixlib=rb-4.1.0&q=80&w=1080",
+      "imageHint": "ecommerce website"
+    }
+  ]
 }
