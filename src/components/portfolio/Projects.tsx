@@ -1,8 +1,8 @@
-
 import Image from "next/image";
 import Link from "next/link";
-import { ExternalLink, Github, Layers, Zap, Bot } from "lucide-react";
+import { ExternalLink, Github, Layers, Zap, Bot, ArrowUpRight } from "lucide-react";
 import { Badge } from "@/components/ui/badge";
+import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardFooter, CardHeader, CardTitle } from "@/components/ui/card";
 import { PlaceHolderImages } from "@/lib/placeholder-images";
 
@@ -15,6 +15,7 @@ const projects = [
     icon: Bot,
     github: "https://github.com/Tech-Lab-ai/InsightAI-Engine.git",
     demo: "#",
+    metric: "99.9% Precisão RAG"
   },
   {
     id: "project-2",
@@ -24,6 +25,7 @@ const projects = [
     icon: Zap,
     github: "https://github.com/Tech-Lab-ai/CloudForge-CLI.git",
     demo: "#",
+    metric: "0.2s Provisionamento"
   },
   {
     id: "project-3",
@@ -33,6 +35,7 @@ const projects = [
     icon: Layers,
     github: "https://github.com/Tech-Lab-ai/EventStreamer-Pro.git",
     demo: "#",
+    metric: "50k req/seg"
   }
 ];
 
@@ -40,71 +43,75 @@ export function Projects() {
   return (
     <section id="projects" className="py-32 relative overflow-hidden">
       <div className="container mx-auto px-4">
-        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-20">
-          <div className="space-y-4 max-w-2xl">
-            <Badge variant="outline" className="border-accent/30 text-accent uppercase tracking-widest text-[10px] font-bold">
-              Portfólio
+        <div className="flex flex-col md:flex-row justify-between items-start md:items-end gap-8 mb-24">
+          <div className="space-y-6 max-w-2xl">
+            <Badge variant="outline" className="border-accent/40 text-accent uppercase tracking-widest text-[10px] font-bold bg-accent/5 px-4 py-1">
+              Showcase de Engenharia
             </Badge>
-            <h2 className="text-4xl md:text-5xl font-bold tracking-tight">Destaques de Engenharia</h2>
-            <p className="text-muted-foreground text-lg leading-relaxed">
-              Explorando a interseção entre performance e inteligência. Estes projetos 
-              representam meu foco em arquitetura de nuvem em larga escala e integração de IA.
+            <h2 className="text-5xl md:text-6xl font-bold tracking-tighter">Sistemas em Produção</h2>
+            <p className="text-xl text-muted-foreground font-light leading-relaxed">
+              Explorações avançadas em sistemas distribuídos e inteligência artificial. Cada projeto foca em alta disponibilidade e performance.
             </p>
           </div>
-          <Link 
-            href="https://github.com/Tech-Lab-ai" 
-            target="_blank" 
-            className="group flex items-center gap-2 text-primary font-semibold hover:opacity-80 transition-all"
-          >
-            Todos os Repositórios <ExternalLink className="w-4 h-4 group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform" />
-          </Link>
+          <Button variant="ghost" className="group text-primary font-bold gap-2 hover:bg-primary/10 rounded-xl px-6 py-6" asChild>
+            <Link href="https://github.com/Tech-Lab-ai" target="_blank">
+              Todos os Repositórios <ExternalLink className="w-5 h-5 transition-transform group-hover:translate-x-1 group-hover:-translate-y-1" />
+            </Link>
+          </Button>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-10">
           {projects.map((project) => {
             const image = PlaceHolderImages.find((img) => img.id === project.id);
             return (
-              <Card key={project.id} className="project-card-hover group border-white/5 bg-card/30 backdrop-blur-md flex flex-col h-full overflow-hidden">
-                <div className="relative aspect-video overflow-hidden">
-                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-colors duration-500 z-10" />
+              <Card key={project.id} className="project-card-hover group border-white/5 bg-card/20 backdrop-blur-3xl flex flex-col h-full overflow-hidden rounded-[2.5rem] shadow-2xl">
+                <div className="relative aspect-[16/10] overflow-hidden m-3 rounded-[1.8rem]">
+                  <div className="absolute inset-0 bg-primary/20 group-hover:bg-transparent transition-all duration-700 z-10" />
                   <Image
                     src={image?.imageUrl || ""}
                     alt={project.title}
                     fill
-                    className="object-cover group-hover:scale-110 transition-transform duration-700"
+                    className="object-cover group-hover:scale-105 transition-transform duration-1000 ease-out"
                     data-ai-hint={image?.imageHint}
                   />
                   <div className="absolute top-4 left-4 z-20">
-                    <div className="p-2 glass rounded-lg border shadow-lg">
-                      <project.icon className="w-5 h-5 text-primary" />
+                    <div className="p-3 glass rounded-2xl border-white/10 shadow-2xl">
+                      <project.icon className="w-6 h-6 text-primary" />
                     </div>
+                  </div>
+                  <div className="absolute bottom-4 right-4 z-20">
+                    <Badge className="bg-black/60 backdrop-blur-md border-white/10 text-[10px] font-bold py-1 px-3">
+                      {project.metric}
+                    </Badge>
                   </div>
                 </div>
                 
-                <CardHeader className="space-y-4 pt-6">
+                <CardHeader className="space-y-4 px-8 pt-6">
                   <div className="flex flex-wrap gap-2">
                     {project.tags.map((tag) => (
-                      <Badge key={tag} variant="secondary" className="bg-secondary/50 text-[10px] uppercase font-bold tracking-tight">
+                      <span key={tag} className="tech-badge">
                         {tag}
-                      </Badge>
+                      </span>
                     ))}
                   </div>
-                  <CardTitle className="text-2xl group-hover:text-primary transition-colors">{project.title}</CardTitle>
+                  <CardTitle className="text-2xl font-bold group-hover:text-primary transition-colors tracking-tight">{project.title}</CardTitle>
                 </CardHeader>
                 
-                <CardContent className="flex-1">
-                  <p className="text-muted-foreground text-sm leading-relaxed">
+                <CardContent className="flex-1 px-8 pb-8">
+                  <p className="text-muted-foreground text-sm leading-relaxed font-light">
                     {project.description}
                   </p>
                 </CardContent>
                 
-                <CardFooter className="pb-6 pt-4 flex gap-6 border-t border-white/5 mx-6 px-0">
-                  <Link href={project.github} target="_blank" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-foreground transition-colors">
+                <CardFooter className="px-8 py-6 border-t border-white/5 bg-white/[0.02] flex items-center justify-between">
+                  <Link href={project.github} target="_blank" className="flex items-center gap-2 text-xs font-bold text-muted-foreground hover:text-primary transition-colors">
                     <Github className="w-4 h-4" /> Código Fonte
                   </Link>
-                  <Link href={project.demo} className="flex items-center gap-2 text-xs font-bold text-primary hover:text-primary/80 transition-colors">
-                    <ExternalLink className="w-4 h-4" /> Sistema Online
-                  </Link>
+                  <Button variant="ghost" size="sm" className="rounded-xl group/btn h-10 px-4 bg-primary/5 hover:bg-primary hover:text-white" asChild>
+                    <Link href={project.demo} className="flex items-center gap-2 text-xs font-bold">
+                      Acessar <ArrowUpRight className="w-4 h-4 transition-transform group-hover/btn:translate-x-0.5 group-hover/btn:-translate-y-0.5" />
+                    </Link>
+                  </Button>
                 </CardFooter>
               </Card>
             );
