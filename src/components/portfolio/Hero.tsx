@@ -1,3 +1,4 @@
+
 import Image from "next/image";
 import Link from "next/link";
 import { Github, Linkedin, ArrowRight, Sparkles, MessageCircle, Code2, Cpu } from "lucide-react";
@@ -81,9 +82,9 @@ export function Hero() {
             <div className="absolute inset-0 bg-gradient-to-tr from-primary/50 to-accent/50 rounded-[3rem] blur-3xl opacity-30 group-hover:opacity-40 transition-opacity duration-700" />
             
             <div className="relative aspect-square w-full rounded-[2.5rem] overflow-hidden border border-white/20 p-1.5 bg-white/5 backdrop-blur-3xl shadow-[0_0_100px_-20px_rgba(3,155,229,0.4)] flex items-center justify-center transition-transform duration-700 group-hover:scale-[1.02]">
-              <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden">
+              <div className="relative w-full h-full rounded-[2.2rem] overflow-hidden bg-muted/20">
                 <Image
-                  src="/Marketing material i.png"
+                  src="/marketing-hero.png"
                   alt="Vini Amaral - Senior Engineer"
                   fill
                   className="object-cover brightness-110 saturate-[1.2]"
