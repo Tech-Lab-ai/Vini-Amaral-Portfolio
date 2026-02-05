@@ -49,7 +49,7 @@ export function Footer() {
               target="_blank"
               className="flex items-center gap-2 px-6 py-4 rounded-2xl bg-accent text-accent-foreground font-bold text-sm hover:scale-105 transition-all shadow-xl shadow-accent/20 group"
             >
-              <Heart className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" /> Apoiar ou Contratar
+              <Heart className="w-4 h-4 fill-current group-hover:scale-110 transition-transform" /> Apoiar ou Contratar Agora
             </Link>
           </div>
         </div>
@@ -67,10 +67,10 @@ export function Footer() {
 
         {/* Seção de Pagamento Final */}
         <div className="mt-12 pt-8 flex flex-col items-center gap-4 text-center">
-          <p className="text-[10px] font-bold text-muted-foreground/50 uppercase tracking-[0.2em]">
+          <p className="text-[10px] font-bold text-muted-foreground/70 uppercase tracking-[0.2em]">
             Aceitamos os cartões em até 20 vezes
           </p>
-          <div className="relative w-full max-w-[320px] h-12 grayscale opacity-50 hover:grayscale-0 hover:opacity-100 transition-all duration-500">
+          <div className="relative w-full max-w-[320px] h-12 transition-all duration-500">
             <Image 
               src="/bandeiras.png" 
               alt="Bandeiras de Cartão" 
