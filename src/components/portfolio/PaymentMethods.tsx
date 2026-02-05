@@ -1,7 +1,8 @@
-
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Zap, FileText, CreditCard, ShieldCheck, CheckCircle2, Wallet } from "lucide-react";
+import { Zap, FileText, CreditCard, ShieldCheck, CheckCircle2, Wallet, Heart } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import Link from "next/link";
 
 const paymentMethods = [
   {
@@ -93,9 +94,16 @@ export function PaymentMethods() {
                     <p className="text-xs text-muted-foreground">Processamento via API segura</p>
                   </div>
                 </div>
-                <p className="text-xs text-muted-foreground italic pt-4">
-                  * Dúvidas sobre condições ou opções personalizadas? Entre em contato para avaliarmos a melhor solução.
-                </p>
+                <div className="pt-4 space-y-4">
+                  <p className="text-xs text-muted-foreground italic">
+                    * Gostou do meu trabalho? Você também pode apoiar meus projetos open-source.
+                  </p>
+                  <Button asChild className="w-full rounded-full bg-accent text-accent-foreground hover:opacity-90 font-bold">
+                    <Link href="https://www.asaas.com/c/2h5zwl883x3g3erc" target="_blank">
+                      <Heart className="w-4 h-4 mr-2 fill-current" /> Fazer uma Doação / Apoiar
+                    </Link>
+                  </Button>
+                </div>
               </div>
             </div>
           </div>

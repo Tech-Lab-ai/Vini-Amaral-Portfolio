@@ -9,27 +9,30 @@ O projeto foi construído com as tecnologias mais modernas do mercado para garan
 - **Framework:** [Next.js 15 (App Router)](https://nextjs.org/)
 - **Linguagem:** [TypeScript](https://www.typescriptlang.org/)
 - **Estilização:** [Tailwind CSS](https://tailwindcss.com/)
-- **Componentes UI:** [ShadCN UI](https://ui.shadcn.com/) (baseado em Radix UI)
-- **Inteligência Artificial:** [Genkit](https://github.com/firebase/genkit) (para processamento de dados e resumos de atividades)
+- **Componentes UI:** [ShadCN UI](https://ui.shadcn.com/)
+- **Inteligência Artificial:** [Genkit](https://github.com/firebase/genkit)
 - **Ícones:** [Lucide React](https://lucide.dev/)
-- **Animações:** Tailwind Animate & CSS Glassmorphism
-- **Gerenciamento de Tema:** Next Themes (Suporte a Dark/Light mode)
+
+## 💖 Apoie o Desenvolvedor
+
+Se você gosta do meu trabalho ou utiliza algum dos meus projetos open-source, considere fazer uma doação para apoiar o desenvolvimento contínuo:
+
+👉 [Apoiar via Asaas](https://www.asaas.com/c/2h5zwl883x3g3erc)
 
 ## ✨ Funcionalidades
 
-- **Design Responsivo:** Adaptado para dispositivos móveis, tablets e desktops.
-- **Seletor de Tema:** Suporte completo para modo claro e escuro, com transições suaves e persistência de preferência.
-- **AI-Powered GitHub Feed:** Um feed dinâmico que busca as últimas issues do repositório `CloudForge-CLI` e utiliza IA (via Genkit) para gerar resumos técnicos e legíveis.
-- **Seção de Projetos:** Galeria de destaques de engenharia com links diretos para o código-fonte.
-- **Integração de Pagamentos:** Informações detalhadas sobre meios de pagamento seguros via plataforma Asaas.
-- **Canais de Contato:** Integração direta com WhatsApp, LinkedIn, GitHub, Facebook e E-mail.
+- **Design Responsivo:** Adaptado para todos os dispositivos.
+- **Seletor de Tema:** Suporte completo para modo claro e escuro estilo Firebase.
+- **AI-Powered GitHub Feed:** Feed dinâmico que utiliza IA para resumir atividades do `CloudForge-CLI`.
+- **Seção de Projetos:** Galeria técnica com links diretos para GitHub.
+- **Pagamentos Seguros:** Detalhes sobre meios de pagamento via Asaas.
 
 ## 🛠️ Configuração e Instalação
 
 ### Pré-requisitos
 
-- Node.js 20+ ou superior
-- Uma chave de API do Google AI (para as funcionalidades de IA do Genkit)
+- Node.js 20+
+- Chave de API do Google AI
 
 ### Passos para rodar localmente
 
@@ -43,21 +46,19 @@ O projeto foi construído com as tecnologias mais modernas do mercado para garan
    npm install
    ```
 
-3. **Configure as variáveis de ambiente:**
-   Crie um arquivo `.env` na raiz do projeto e adicione sua chave:
+3. **Configure o `.env`:**
    ```env
    GOOGLE_GENAI_API_KEY=sua_chave_aqui
    ```
 
-4. **Inicie o servidor de desenvolvimento:**
+4. **Inicie o servidor:**
    ```bash
    npm run dev
    ```
-   Acesse `http://localhost:9002` no seu navegador.
 
 ## 📄 Licença
 
-Este projeto é de uso pessoal e profissional. Sinta-se à vontade para explorar o código como referência.
+Este projeto é de uso pessoal e profissional.
 
 ---
-Desenvolvido com ❤️ por Vini Amaral.# Vini-Amaral-Portfolio
+Desenvolvido com ❤️ por Vini Amaral.
