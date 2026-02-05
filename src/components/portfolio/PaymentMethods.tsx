@@ -4,9 +4,7 @@
 import { useState, useEffect } from "react";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Zap, FileText, CreditCard, ShieldCheck, CheckCircle2, Wallet, Heart, Receipt, Info, ArrowRight } from "lucide-react";
-import { Button } from "@/components/ui/button";
-import Link from "next/link";
+import { Zap, FileText, CreditCard, ShieldCheck, CheckCircle2, Receipt, Info, ArrowRight } from "lucide-react";
 
 const paymentMethods = [
   {
@@ -53,7 +51,7 @@ export function PaymentMethods() {
             {paymentMethods.map((method) => (
               <div key={method.name} className="relative group">
                 <div className="absolute -inset-0.5 bg-gradient-to-b from-primary/30 to-transparent rounded-[2rem] blur opacity-0 group-hover:opacity-100 transition duration-500" />
-                <Card className="bg-card/60 backdrop-blur-3xl border-white/20 relative rounded-[2rem] overflow-hidden group-hover:bg-white/[0.05] transition-colors h-full shadow-2xl">
+                <Card className="bg-card/80 backdrop-blur-3xl border-white/20 relative rounded-[2rem] overflow-hidden group-hover:bg-white/[0.05] transition-colors h-full shadow-2xl">
                   <CardHeader className="p-8">
                     <div className={`w-14 h-14 rounded-2xl bg-secondary flex items-center justify-center ${method.color} mb-6 shadow-inner border border-white/5`}>
                       <method.icon className="w-7 h-7" />
@@ -119,7 +117,7 @@ export function PaymentMethods() {
                     <Badge className="bg-emerald-500/20 text-emerald-400 border border-emerald-500/30 px-3 py-1 font-bold text-[10px] animate-pulse">API ONLINE</Badge>
                   </div>
 
-                  <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-8 relative group">
+                  <div className="p-6 rounded-2xl bg-white/[0.03] border border-white/10 space-y-6 relative group">
                     <div className="flex items-start gap-3">
                       <Info className="w-5 h-5 text-accent shrink-0 mt-0.5" />
                       <p className="text-sm text-foreground/80 italic leading-relaxed font-light">
@@ -127,15 +125,9 @@ export function PaymentMethods() {
                       </p>
                     </div>
                     
-                    <div className="space-y-4">
-                      <Button asChild size="lg" className="w-full h-16 rounded-2xl bg-accent text-accent-foreground hover:scale-[1.02] transition-all font-bold text-lg shadow-xl shadow-accent/20 border-none group">
-                        <Link href="https://www.asaas.com/c/2h5zwl883x3g3erc" target="_blank">
-                          <Heart className="w-6 h-6 mr-2 fill-current group-hover:scale-110 transition-transform" /> 
-                          Apoiar ou Contratar Agora
-                        </Link>
-                      </Button>
-                      <p className="text-center text-[10px] text-muted-foreground/60 uppercase font-bold tracking-[0.2em] flex items-center justify-center gap-2">
-                        <ArrowRight className="w-3 h-3" /> Link de Checkout Seguro Asaas
+                    <div className="pt-4 border-t border-white/5">
+                      <p className="text-[10px] text-muted-foreground/60 uppercase font-bold tracking-[0.2em] flex items-center justify-center gap-2">
+                        <ArrowRight className="w-3 h-3 text-primary" /> Checkout Gerenciado via Webhook
                       </p>
                     </div>
                   </div>
