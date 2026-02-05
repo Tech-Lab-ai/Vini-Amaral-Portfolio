@@ -1,4 +1,3 @@
-
 "use client";
 
 import Link from "next/link";
@@ -6,7 +5,6 @@ import Image from "next/image";
 import { Github, Linkedin, Mail, Menu, Command, Facebook, MessageCircle, Heart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
-import { ThemeToggle } from "./ThemeToggle";
 
 const navLinks = [
   { name: "Engenharia", href: "#about" },
@@ -19,7 +17,7 @@ const navLinks = [
 export function Navbar() {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 transition-all duration-300">
-      <div className="absolute inset-0 bg-background/70 backdrop-blur-xl border-b border-border/10 shadow-sm" />
+      <div className="absolute inset-0 bg-white/70 backdrop-blur-xl border-b border-border/10 shadow-sm" />
       <div className="container mx-auto px-4 h-28 flex items-center justify-between relative">
         <Link href="/" className="flex items-center gap-3 group">
           <div className="relative">
@@ -28,7 +26,7 @@ export function Navbar() {
               alt="Vini Amaral" 
               width={600} 
               height={150} 
-              className="h-24 w-auto object-contain transition-transform group-hover:scale-105 dark:invert-0 invert"
+              className="h-24 w-auto object-contain transition-transform group-hover:scale-105"
               priority
             />
           </div>
@@ -52,7 +50,6 @@ export function Navbar() {
           <div className="h-6 w-px bg-border mx-2" />
           
           <div className="flex items-center gap-4">
-            <ThemeToggle />
             <Button variant="ghost" size="icon" asChild className="rounded-full text-muted-foreground hover:text-primary">
               <Link href="https://wa.me/5551981446019" target="_blank">
                 <MessageCircle className="w-5 h-5" />
@@ -76,14 +73,13 @@ export function Navbar() {
 
         {/* Mobile Nav */}
         <div className="md:hidden flex items-center gap-4">
-          <ThemeToggle />
           <Sheet>
             <SheetTrigger asChild>
               <Button variant="ghost" size="icon" className="hover:bg-secondary">
                 <Menu className="w-6 h-6" />
               </Button>
             </SheetTrigger>
-            <SheetContent side="right" className="bg-background border-l border-border w-[80%]">
+            <SheetContent side="right" className="bg-white border-l border-border w-[80%]">
               <div className="flex flex-col gap-10 mt-16">
                 <div className="flex items-center gap-3 mb-4">
                   <Command className="w-8 h-8 text-primary" />

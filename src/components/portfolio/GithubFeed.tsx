@@ -53,14 +53,14 @@ export function GithubFeed() {
             </div>
             
             <div className="flex flex-wrap gap-4">
-              <div className="glass px-5 py-3 rounded-2xl flex items-center gap-3 border-white/20">
+              <div className="glass px-5 py-3 rounded-2xl flex items-center gap-3 border-black/10">
                 <div className="w-2 h-2 rounded-full bg-emerald-500 animate-pulse shadow-[0_0_10px_rgba(16,185,129,0.6)]" />
                 <div className="text-left">
                   <p className="text-[9px] uppercase font-bold text-muted-foreground leading-none">Branch Principal</p>
                   <p className="text-xs font-bold font-code">main (stable)</p>
                 </div>
               </div>
-              <div className="glass px-5 py-3 rounded-2xl flex items-center gap-3 border-white/20">
+              <div className="glass px-5 py-3 rounded-2xl flex items-center gap-3 border-black/10">
                 <Cpu className="w-4 h-4 text-primary" />
                 <div className="text-left">
                   <p className="text-[9px] uppercase font-bold text-muted-foreground leading-none">Stack</p>
@@ -71,34 +71,31 @@ export function GithubFeed() {
           </div>
 
           <div className="relative group">
-            {/* Ambient Glow */}
-            <div className="absolute -inset-1 bg-gradient-to-r from-primary/40 via-accent/20 to-primary/40 rounded-[2.5rem] blur-2xl opacity-30 group-hover:opacity-50 transition-opacity duration-700" />
-            
-            <Card className="border-white/20 bg-card/80 backdrop-blur-3xl shadow-2xl relative overflow-hidden rounded-[2.5rem]">
-              <CardHeader className="bg-white/5 border-b border-white/10 py-5 px-8 flex flex-row items-center justify-between">
+            <Card className="border-black/10 bg-white/80 backdrop-blur-3xl shadow-2xl relative overflow-hidden rounded-[2.5rem]">
+              <CardHeader className="bg-black/5 border-b border-black/5 py-5 px-8 flex flex-row items-center justify-between">
                 <div className="flex items-center gap-4">
                   <div className="flex gap-1.5">
                     <div className="w-3 h-3 rounded-full bg-destructive/60 border border-destructive/70" />
                     <div className="w-3 h-3 rounded-full bg-accent/60 border border-accent/70" />
                     <div className="w-3 h-3 rounded-full bg-emerald-500/60 border border-emerald-500/70" />
                   </div>
-                  <div className="h-4 w-px bg-white/20 mx-2" />
+                  <div className="h-4 w-px bg-black/10 mx-2" />
                   <CardTitle className="flex items-center gap-2 text-sm font-code tracking-tight text-foreground/70">
                     <Terminal className="w-4 h-4" />
                     tech-lab-cli --verbose --analyze
                   </CardTitle>
                 </div>
                 {currentTime && (
-                  <Badge variant="outline" className="font-code text-[10px] border-white/20 text-foreground/60 bg-white/5">
+                  <Badge variant="outline" className="font-code text-[10px] border-black/10 text-foreground/60 bg-black/5">
                     UTC-3: {currentTime}
                   </Badge>
                 )}
               </CardHeader>
               
               <CardContent className="p-0">
-                <div className="grid lg:grid-cols-[280px_1fr] divide-x divide-white/10">
+                <div className="grid lg:grid-cols-[280px_1fr] divide-x divide-black/5">
                   {/* Sidebar Telemetry */}
-                  <div className="p-8 space-y-8 bg-white/5 hidden lg:block">
+                  <div className="p-8 space-y-8 bg-black/5 hidden lg:block">
                     <div className="space-y-4">
                       <p className="text-[10px] font-bold uppercase tracking-[0.2em] text-primary">System Metrics</p>
                       <div className="space-y-3">
@@ -107,7 +104,7 @@ export function GithubFeed() {
                           { label: "Security", val: "PCI-DSS", icon: Lock },
                           { label: "Latency", val: "42ms", icon: Activity }
                         ].map((stat, i) => (
-                          <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-white/10 border border-white/10">
+                          <div key={i} className="flex items-center justify-between p-3 rounded-xl bg-white border border-black/5">
                             <stat.icon className="w-3.5 h-3.5 text-primary" />
                             <div className="text-right">
                               <p className="text-[8px] uppercase text-muted-foreground">{stat.label}</p>
@@ -117,12 +114,12 @@ export function GithubFeed() {
                         ))}
                       </div>
                     </div>
-                    <div className="p-4 rounded-2xl bg-primary/10 border border-primary/20">
+                    <div className="p-4 rounded-2xl bg-primary/5 border border-primary/10">
                       <p className="text-[10px] font-bold text-primary uppercase mb-3">IA Engine Active</p>
                       <div className="flex gap-1.5">
                         {[1,2,3,4,5,6].map(i => (
-                          <div key={i} className="h-5 flex-1 bg-primary/30 rounded-sm overflow-hidden relative">
-                            <div className="absolute inset-0 bg-primary animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
+                          <div key={i} className="h-5 flex-1 bg-primary/20 rounded-sm overflow-hidden relative">
+                            <div className="absolute inset-0 bg-primary/40 animate-pulse" style={{ animationDelay: `${i * 0.2}s` }} />
                           </div>
                         ))}
                       </div>
@@ -130,7 +127,7 @@ export function GithubFeed() {
                   </div>
 
                   {/* Main Log Area */}
-                  <div className="p-8 min-h-[400px] bg-white/[0.02]">
+                  <div className="p-8 min-h-[400px] bg-white">
                     {loading ? (
                       <div className="h-full flex flex-col items-center justify-center gap-6 text-muted-foreground py-20">
                         <div className="relative">
@@ -144,7 +141,7 @@ export function GithubFeed() {
                         {activities.map((activity, idx) => (
                           <div 
                             key={idx} 
-                            className="flex items-start gap-4 p-3 rounded-lg hover:bg-white/10 transition-colors group/line border border-transparent hover:border-white/10"
+                            className="flex items-start gap-4 p-3 rounded-lg hover:bg-secondary/50 transition-colors group/line border border-transparent"
                           >
                             <span className="text-primary/40 text-[10px] mt-1 shrink-0 select-none font-bold">
                               {String(idx + 1).padStart(2, '0')}
@@ -168,16 +165,16 @@ export function GithubFeed() {
                 </div>
               </CardContent>
               
-              <div className="bg-white/5 py-4 px-8 border-t border-white/10 flex flex-col md:flex-row justify-between items-center gap-4">
+              <div className="bg-black/5 py-4 px-8 border-t border-black/5 flex flex-col md:flex-row justify-between items-center gap-4">
                  <p className="text-[10px] font-code text-primary uppercase tracking-widest font-bold">
                    // CONNECTION_ESTABLISHED // NODE: tech-lab-main-01
                  </p>
                  <div className="flex items-center gap-4">
                     <div className="flex items-center gap-2">
                       <div className="w-1.5 h-1.5 rounded-full bg-emerald-500 animate-ping" />
-                      <span className="text-[9px] font-bold text-emerald-400 uppercase">Sync OK</span>
+                      <span className="text-[9px] font-bold text-emerald-600 uppercase">Sync OK</span>
                     </div>
-                    <span className="text-[9px] text-white/20">|</span>
+                    <span className="text-[9px] text-black/10">|</span>
                     <p className="text-[9px] text-foreground/50 font-code tracking-tighter">BUILD v2.4.0-STABLE</p>
                  </div>
               </div>
